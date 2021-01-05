@@ -15,5 +15,10 @@ public class EndEffector : MonoBehaviour
             if(parentAgent != null)
                 parentAgent.GroundHitPenalty();
         }
+        else if (other.transform.CompareTag("Obstacle"))
+        {
+            if (parentAgent != null)
+                parentAgent.ObstacleHitPenalty();
+        }
     }
 }
